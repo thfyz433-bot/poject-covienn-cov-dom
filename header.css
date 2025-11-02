@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* ده بيخلي الي جوا البوكس مالوش قيمه */
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg:#f1f1f1;
+    --bg-secondary:#fbfbfb;
+    --dark-gray:#333;
+    --light-brown:#c7a17a;
+    --black:#1f2226;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color: var(--dark-gray);
+  
+}
+
+
+h1,
+h2,
+h3{
+  font-family: "Roboto", sans-serif;
+ }
+
+
+
+ul{
+    /* بيشيل النقطه الي جمب الكلمه */
+    list-style: none;
+   
+}
+a{
+    text-decoration: none;
+    
+}
+
+    /* header start  */
+#header{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    border-bottom:1px solid #ccc ;
+      z-index: 10;
+     
+}
+
+#header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+  
+    margin: auto;
+height: 90px;
+
+}
+
+#header .navbar .logo{
+    width: 300px;
+}
+
+#header .navbar ul{
+    display: flex;
+
+}
+#header .navbar ul li a{
+    margin: 0 20px;
+    color: var(--dark-gray);
+    /* سومك الخط */
+    font-weight: 500;
+    font-size: 18px;
+    /* تحكم في وقت الهوفي */
+    transition: all 0.3s ease;
+}
+#header .navbar ul li a:hover{
+    color: var(--light-brown);
+}
+
+
+@media (max-width:1000px){
+    #header{
+   
+    width: 100%;
+  
+}
+
+#header .navbar .logo{
+    width: 200px;
+}
+
+#header .navbar ul li a{
+    font-size: 12px;
+    margin: 0 10px ;
+    
+}
+}
+
+
+
+
+   /* header end   */
+
+
+
+
+
+
+
+
+
+   /*  main section */
+
+
+
+/* utilitly  classes */
+
+.container{
+    position: relative;
+      top: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* home start */
+   #home{
+  
+    background: url(./puplick/home-bg.png ) center no-repeat;
+    background-size: 100%;
+      background-color: #f1f1f1;
+
+
+   }
+#home .home-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    gap: 1rem;
+    align-items: center;
+}
+
+#home .home-content .content-text h3{
+    font-size: 15px;
+    font-weight: 400;
+   
+}
+#home .home-content .content-text h1{
+    font-size: 100x;
+    font-weight: 900;
+    /* عشان اععمل تباعد بين الحروف */
+    letter-spacing: 2px;
+
+    margin: 7px 0;
+   /* width: 20px; */
+  
+    line-height: 1.3;
+    /* مسافات في الطول */
+}
+#home .home-content .content-text p{
+    font-size: 18px;
+    line-height: 1.3;
+}
+#home .home-content .content-text .btn{
+    /* الbutton مش بياخد قيمه مارجين من فوق او من تحت  */
+    display: inline-block;
+    
+    margin-top: 2rem;
+    background-color: #c7a17a;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+#home .home-content .content-text i{
+    margin-left: 3px;
+}
+#home .home-content .content-text .btn:hover{
+    background-color: #333;
+
+}
+#home .home-content img{
+    display: block;
+    width: 100%;
+}
+
+
+@media (max-width:1000px){
+    #home .home-content img{
+        width: 250px;
+    }
+
+    .container{
+        padding: 0 50px;
+        position: relative;
+        left: 0px;
+        width: 100%;
+    }
+
+    #home .home-content .content-text h3{
+        font-size: 14px;
+
+    }
+
+    #home .home-content .content-text h1{
+        font-size: 20px;
+    }
+
+    #home .home-content .content-text p{
+        font-size: 14px;
+    }
+
+    #home .home-content .content-text .btn{
+    padding: 10px 20px;
+    font-size: 15px;
+
+    }
+}
+
+
+/* home end */
+
+   /*  main section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* about section */
+   
+.text-primary{
+      color:#c7a17a;
+}
+
+#about{
+    padding: 6rem 0;
+    max-width: 900px;
+    margin: auto;
+
+}
+
+#about .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.10rem;
+        align-items: center;
+}
+#about .row img{
+    width: 100%;
+}
+#about .row .about-content h2{
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 9px;
+}
+.items{
+    margin: 2rem 0;
+}
+
+#about .row .about-content h3{
+    margin-bottom:3px ;
+
+}
+
+
+@media (max-width:1000px){
+    #about{
+        padding: ;
+    }
+    #about .row .about-content p{
+        font-size: 12px;
+    }
+    #about .row .about-content h2{
+        font-size: 20px;
+        text-align: center;
+        padding-right: 5px;
+        line-height: 30px;
+    }
+
+    #about .row .about-content h3{
+        font-size: 15px;
+    }
+}
+
+   /* about section */
+
+
+
+
+
+
+
+
+
+
+   /* menu section  */
+   #menu{
+    background-color: var(--bg-secondary);
+    padding: 6rem 0;
+   }
+   .hedding{
+    text-align: center;
+   }
+   .hedding span{
+    font-size: 1.25rem;
+
+   }
+
+   .hedding h2{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+   }
+
+   .row{
+
+    /* display: flex;
+    gap: 30px; */
+
+    /* اللتنين بيعملو نفس الوظيفة */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+       margin-top: 3rem;
+       gap: 5.10rem;
+       align-items: center;
+    
+      
+   }
+
+      .row .col .item{
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        border: 1px solid #ddd;
+        padding: 25px 20px;
+        margin-right: -40px;
+      }
+       .row .col .item img{
+        width: 80px;
+        margin-left: -50px;
+       }
+     .row .col .item .details{
+        margin-left: 20px;
+     }
+      .row .col .item .details h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+        .row .col .item .details p{
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+          .row .col .item .price {
+            border-left: 1px solid #eee;
+            padding: 20px;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 600;
+          }
+            
+
+          @media (max-width:1000px){
+             .hedding span{
+                font-size: 14px;
+             }
+              .hedding h2{
+                font-size: 25px;
+              }
+
+              .row .col .item{
+                padding: 20px 20px;
+              }
+
+              .row .col .item img{
+                width: 50px;
+                height: 90px;
+                margin-right: -10px;
+              }
+
+              .row .col .item .details{
+                margin-left: 10px;
+              }
+
+              .row .col .item .details h3{
+                font-size: 15px;
+                margin-left: 10px;
+
+              }
+
+               .row .col .item .details p{
+                font-size: 12px;
+                margin-left: 10px;
+               }
+
+               .row .col .item .price {
+                font-size: 15px;
+                padding: 10px;
+               }
+             
+               
+          }
+
+
+   /* menu section  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* Testimonials section */
+
+   #testimonials, #contact{
+    padding: 6rem 0;
+
+   }
+
+      #testimonials .row{
+        /* مالوش لازمه غير في السيكشن الي تحت الناف */
+        /* display: grid;
+        grid-template-columns: repeat(3 1fr); */
+        display: flex;
+        margin-top: 6rem;
+        gap: 2.5rem;
+      }
+       #testimonials .row .item img{
+       width: 100px ;
+       height: 100px;
+       object-fit: cover;
+       border-radius: 50%;
+       border: 5px #fff solid ;
+       margin-top: -70px;
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+       }
+
+       #testimonials .row .item {
+        background-color: var(--color-bg);
+        text-align: center;
+        padding: 25px 30px 35px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+       }
+
+        #testimonials .row .item h3{
+            margin: 20px 0 10px;
+        }
+         #testimonials .row .item p{
+            line-height: 1.4;
+         }
+
+          @media (max-width:1000px){
+            #testimonials .row{
+                gap: 1rem;
+            }
+
+            #testimonials .row .item img{
+                width: 70px;
+                height: 70px;
+                
+            }
+            #testimonials .row .item{
+        padding: 15px 20px 25px;
+
+            }
+             #testimonials .row .item h3{
+            margin: 15px 0 5px;
+            font-size: 15px;
+
+          }
+          #testimonials .row .item p{
+          font-size: 12px;
+          }
+}
+   /* Testimonials section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* contact section */
+   #contact{
+background-color: var(--color-bg);
+
+   }
+#contact .row{
+    /* display: grid;
+    grid-template-columns: 2fr 1.4fr; */
+    margin-top: 7rem;
+    display: flex;
+
+}
+
+#contact .contact-content{
+    background-color: var(--bg-secondary);
+    padding: 2.3rem ;
+    width: 500px;
+    position: relative;
+   left: 50px;
+   min-width: 500px;
+   
+   
+    
+    
+}
+
+#contact .contact-content h3{
+position: relative;
+right: 115px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+#contact .contact-content form input , textarea{
+width: 100%;
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    border: #ccc 10px ;
+    border-radius:20px ;
+    background-color: #cac9c960;
+   
+}
+#contact .contact-content form .btn-submit{
+    width: 100%;
+    background-color: var(--black);
+    border: none;
+    color: #f1f1f1;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s all  ease;
+}
+#contact .contact-content form .btn-submit:hover{
+    background-color: var(--light-brown);
+}
+#contact .map iframe{
+    margin-left: -120px;
+    width: auto;
+    min-width: 500px;
+    min-height: 500px;
+    
+    
+
+}
+#contact     .contact-content #message{
+
+    padding-bottom: 80px;
+    padding-left: 20px;
+}
+
+
+@media (max-width:1000px){
+          #contact .contact-content{
+            all: unset;
+          background-color: var(--bg-secondary);
+    padding: 2.3rem ;
+    width: 500px;
+    
+   min-width: 400px;
+   border-radius: 20px;
+  
+          }
+#contact .contact-content h3{
+    font-size: 17px;
+    font-weight: 600;
+}
+#contact .map iframe{
+    display: none;
+}
+#contact{
+    width: 100%;
+}
+
+#contact .contact-content{
+
+    position: relative;
+    right: 50px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* foter aection */
+#foter .foter-top{
+    padding: 6rem 0;
+    background: url(./puplick/footer-bg.png);
+    color: #fff;
+    min-height: 300px;
+
+    
+}
+#foter .foter-top .row{
+    display: flex;
+    gap: 120px;
+}
+#foter .foter-top .col5{
+    margin-left: -100px;
+}
+#foter .foter-top .row .col h3{
+    color: #fff;
+    margin: 10px;
+    margin-left: -1px;
+}
+#foter .foter-top .row .col p{
+line-height: 30px;
+width: 400px;
+font-weight: 600;
+}
+#foter .foter-top .row .col ul li{
+    margin: 10px 0;
+}
+
+#extantion{
+position: relative;
+left: 100px;
+}
+#foter .foter-top .row .col ul li i{
+    margin-right: 10px;
+}
+#foter .foter-top .row .col ul li a{
+    color: #fff;
+}
+#foter .foter-top .row .col ul li a:hover{
+    color: var(--light-brown);
+}
+
+#foter .copy-right p {
+    text-align: center;
+    background-color: var(--black);
+    padding: 20px 0;
+    color: #fff;
+
+}
+#foter .copy-right a{
+    color: var(--light-brown);
+}
+
+@media (max-width:1000px){
+    #foter .foter-top {
+        display: none;
+    }
+    
+#foter .copy-right p {
+    text-align: center;
+    background-color: var(--black);
+    padding: 20px 0;
+    color: #fff;
+
+}
+#foter .copy-right a{
+    color: var(--light-brown);
+}
+}
+/* foter aection */
